@@ -31,3 +31,33 @@
     #bodyFix {
         margin-left: 20px;
     }
+
+
+    .container {
+        height: 1000px;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+        
+         .box {
+            border: 1px solid red;
+            width: 200px;
+        }
+
+    
+    .news_album {
+            display: flex;
+            flex-flow: column wrap;
+    }
+          
+        .album_con {
+            border: 1px solid gray;
+            padding: 10px;
+            width: 200px;
+            height: auto;
+            background-size: cover;
+        }
