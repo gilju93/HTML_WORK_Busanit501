@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            border: 3px solid pink;
+            /* grid-template-columns: 100px 200px 300px; */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+            /* auto-fit : 요소 개수 지정, minmax(최소,최대) */
+
+            /* fraction 분수 의 약자 */
+        }
+
+        .box {
+            border: 1px solid red;
+            /* width: 200px; */
+        }
+
+
+        .container img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            /* object-fit: cover; */
+            /* transition: transform 0.5s; */
+            border-radius: 8px;
+            /* background-color: aqua;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s; */
+            transition: transform 2.5s ease-in-out, background-color 2.5s ease-in-out;
+        }
+
+        .container img:hover {
+            /* transform: scale(1.03); */
+            /* transform: translate(100px, 100px); */
+            transform: rotate(45deg);
+            /* transform: skew(45deg, 15deg); */
+            /* transform: scale(1.03); */
+            background-color: blue;
+        }
+
+        .container .test1 {
+            border: 2px solid red;
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+
+        <div class="test1">
+            <img src="../../jpg/test1.jpg" alt="샘플사진1">
+        </div>
+        <div class="galleryTitle">
+            <img src="../../jpg/test2.jpg" alt="샘플사진2">
+        </div>
+        <div class="galleryTitle">
+            <img src="../../jpg/test3.jpg" alt="샘플사진3">
+        </div>
+        <div class="galleryTitle">
+            <img src="../../jpg/test4.jpg" alt="샘플사진4">
+        </div>
+        <div class="galleryTitle">
+            <img src="../../jpg/test5.jpg" alt="샘플사진5">
+        </div>
+        <div class="galleryTitle">
+            <img src="../../jpg/test6.jpg" alt="샘플사진6">
+        </div>
+
+
+
+        <!-- <div class="box">Box 1
+    </div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+    <div class="box">Box 6</div> -->
+
+    </div>
+
+</body>
+
+</html>

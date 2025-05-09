@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 배경테두리 이미지 마우스 올리면 효과적용 할 것임. -->
+<body>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+            gap: 16px;
+            padding: 16px;
+            border: 5px solid pink;
+        }
+
+        .img-wrapper {
+            background-color: white;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            /* 트랜지션 작업 진행하기 */
+            /* 1.배경색 변경 2.확대 */
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .img-wrapper img {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            /* margin -> 0은 위쪽 아랫쪽 , auto는 왼쪽 오른쪽 -> 결론은 가운데정렬 */
+        }
+
+        .img-wrapper:hover {
+            background-color: aqua;
+            transform: scale(1.03);
+
+        }
+
+        .test1 {
+            border: 2px solid blue;
+        }
+
+    </style>
+
+
+    <h2> 사진첩</h2>
+
+    <div class="container">
+        <!-- 클래스 복수 적용시 [class="클래스1 (공백) 클래스2"] -->
+        <div class="img-wrapper test1">
+            <img src="../../jpg/test1.jpg" alt="샘플사진">
+        </div>
+        <div class="img-wrapper test1">
+            <img src="../../jpg/test2.jpg" alt="샘플사진">
+        </div>
+    </div>
+
+</body>
+
+</html>

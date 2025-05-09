@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진첩&쇼핑몰</title>
+</head>
+<body>
+    <style>
+        .container {
+        
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        /* align-items: space-around; */
+        color: blue;
+        /* gap: 20px; */
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .galleryTitle {
+            color: green;
+            text-align: center;
+            border: 3px palevioletred solid ;
+        }
+
+        h1 {
+            color: blueviolet;
+            font-size: 40;
+            text-align: center;
+            border-bottom: double;
+            border-top: double;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        h2 {
+            margin: 0;
+            color: blueviolet;
+            font-size: 20;
+            text-align: center;
+            border: solid;
+            padding-top: 0;
+            padding-bottom: 5px;
+        }
+        #grid {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+    }
+
+        #split {
+            border-right: 2px dotted gray;
+            height: 400px;
+        }
+
+/* 쇼핑몰 분기 */
+
+        h4 {
+            color: rgb(29, 161, 84);
+            font-size: 60;
+            text-align: center;
+            border-bottom: double;
+            border-top: double;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+
+    </style>
+
+    <h1>
+        갤러리 & 쇼핑몰
+    </h1>
+    <div id="grid">
+
+        <div id="split" class="container">
+            <h2>갤러리 목록</h2><br>
+
+                <div>
+                    1.사자
+                </div>
+                <div>
+                    2.주택
+                </div>
+                <div>
+                    3.강아지
+                </div>
+                <div>
+                    4.코딩
+                </div>
+                <div>
+                    5.도시
+                </div>
+                <div>
+                    6.버터
+                </div>
+
+        </div>
+
+        <div>
+            <div class="gallery">
+                <div class="galleryTitle">
+                    <img src="jpg/test1.jpg" alt="샘플사진1">
+                    사자
+                </div>
+                <div class="galleryTitle">
+                    <img src="jpg/test2.jpg" alt="샘플사진2">
+                    주택
+                </div>
+                <div class="galleryTitle">
+                    <img src="jpg/test3.jpg" alt="샘플사진3">
+                    강아지
+                </div>
+                <div class="galleryTitle">
+                    <img src="jpg/test4.jpg" alt="샘플사진4">
+                    코딩
+                </div>
+                <div class="galleryTitle">
+                    <img src="jpg/test5.jpg" alt="샘플사진5">
+                    도시
+                </div>
+                <div class="galleryTitle">
+                    <img src="jpg/test6.jpg" alt="샘플사진6">
+                    버터
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+<!-- 갤러리 // 쇼핑몰 분기점 -->
+
+<h4>
+    판매품 목록
+</h4>
+<div id="grid">
+
+    <div id="split" class="container">
+        <h2>쇼핑 카테고리</h2><br>
+
+            <div>
+                1.사자
+            </div>
+            <div>
+                2.주택
+            </div>
+            <div>
+                3.강아지
+            </div>
+            <div>
+                4.코딩
+            </div>
+            <div>
+                5.도시
+            </div>
+            <div>
+                6.버터
+            </div>
+
+    </div>
+
+    <div>
+        <div class="gallery">
+
+            <div class="galleryTitle">
+                <img src="jpg/test1.jpg" alt="샘플사진1">
+                사자 : 500만원
+            </div>
+            <div class="galleryTitle">
+                <img src="jpg/test2.jpg" alt="샘플사진2">
+                주택 : 7000만원
+            </div>
+            <div class="galleryTitle">
+                <img src="jpg/test3.jpg" alt="샘플사진3">
+                강아지 : 70만원
+            </div>
+            <div class="galleryTitle">
+                <img src="jpg/test4.jpg" alt="샘플사진4">
+                프로그램 : 100만원
+            </div>
+            <div class="galleryTitle">
+                <img src="jpg/test5.jpg" alt="샘플사진5">
+                도시 : 1조
+            </div>
+            <div class="galleryTitle">
+                <img src="jpg/test6.jpg" alt="샘플사진6">
+                버터 : 15000원
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
