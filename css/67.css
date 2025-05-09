@@ -1,11 +1,27 @@
-.container {
+    .container {
         
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: column;
-    /* align-items: space-around; */
-    color: blue;
-    /* gap: 20px; */
+    align-items: space-around;
+    color: black;
+    text-align: center;
+    background-color: rgb(212, 230, 230);
+    border-radius: 8px;
+    gap: 20px;
+    }
+
+    /* 갤러리 목차 좌측 폰트 및 자간 */
+
+   a{
+    color: black;
+    text-decoration: none;
+   }
+
+
+    .titlebg {
+        background-color: rgb(158, 161, 161);
+        border-radius: 8px;
     }
 
     .gallery {
@@ -17,18 +33,20 @@
 
     .gallery img {
         width: 100%;
+        border-radius: 8px;
         height: 200px;
+        aspect-ratio: 1/1;
         object-fit: cover;
     }
 
     .galleryTitle {
-        color: green;
+        color:black;
         text-align: center;
-        border: 3px palevioletred solid ;
+        border: 3px lightgray solid ;
     }
 
     h1 {
-        color: blueviolet;
+        color: black;
         font-size: 40;
         text-align: center;
         border-bottom: double;
@@ -38,31 +56,159 @@
     }
     h2 {
         margin: 0;
-        color: blueviolet;
+        color: black;
         font-size: 20;
         text-align: center;
-        border: solid;
+        border-top: solid;
+        border-bottom: solid;
         padding-top: 0;
         padding-bottom: 5px;
     }
     #grid {
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 200px 1fr;
 }
 
     #split {
         border-right: 2px dotted gray;
-        height: 400px;
+        
+        border-left: 2px dotted gray;
+        /* height: 400px; */
     }
 
 /* 쇼핑몰 분기 */
 
     h4 {
-        color: rgb(29, 161, 84);
+        color:black;
         font-size: 60;
         text-align: center;
         border-bottom: double;
         border-top: double;
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+
+    .gallery2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .gallery2 img {
+        width: 100%;
+        border-radius: 8px;
+        height: 80px;
+        /* aspect-ratio: 1/1; */
+        object-fit: cover;
+    }
+
+    .galleryTitle2 {
+        color: black;
+        text-align: center;
+        border: 3px  lightgray solid ;
+    }
+
+
+    /* .액션 분기 */
+
+
+    .img-wrapper {
+        background-color: white;
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        /* 트랜지션 작업 진행하기 */
+        /* 1.배경색 변경 2.확대 */
+        transition: transform;
+    }
+
+
+    .img-wrapper:hover {
+        transform: scale(1.03);
+        background-color: antiquewhite;
+
+    }
+
+    .responsive {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: rgb(212, 230, 230);
+        /* 반응형 여백 -padding */
+        padding: 2vw;
+        border-radius: 10px;
+        font-size: 40px;
+    }
+
+
+
+
+    /* 애니메이션 페이지 */
+
+    @keyframes Sellpage {
+        /* 초기, 중간, 최종 단계로 구성됨 */
+        
+        0% {
+            opacity: 0;
+            transform: translateY(50px) matrix(0.9) rotate(-5deg);
+            
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(10px) matrix(1.02) rotate(2deg);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0) matrix(1) rotate(0deg);
+        }
+        /* 3단계 이상으로 촘촘히 나누어도 괜찮다. */
+    }
+    
+    .img-animation {
+        background-color: white;
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        /* 트랜지션 작업 진행하기 */
+        /* 1.배경색 변경 2.확대 */
+        /* transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; */
+    
+        /* 애니메이션 적용 해보기 (하단열부터) */
+        animation-name: Sellpage;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-play-state: running;
+
+        /* animation-name: fadeSlideIn; 적용 할 키프레임 이름
+        animation-duration: 1.5s;   얼마나 오래 지속 할 지
+        animation-timing-function: ease-in-out; 애니메이션 가속도 곡선
+        animation-delay: 0.2s;  시전 전 지연대기시간
+        animation-iteration-count: 1;   몇 번 반복 할 것인지
+        animation-direction: normal;    정방향, reverse-역방향
+        animation-fill-mode: both;  종료 후에 스타일 유지 여부, forwards(앞), backward(뒤)
+        animation-play-state: running; 진행 할 지? 멈출지? */
+
+    
+    }
+
+    .img-animation img {
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+        /* margin -> 0은 위쪽 아랫쪽 , auto는 왼쪽 오른쪽 -> 결론은 가운데정렬 */
+    }
+
+    .img-animation:hover {
+        transform: scale(1.03);
+        background-color: antiquewhite;
+
     }
