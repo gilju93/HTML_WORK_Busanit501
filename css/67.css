@@ -19,6 +19,7 @@
    }
 
 
+
     .titlebg {
         background-color: rgb(158, 161, 161);
         border-radius: 8px;
@@ -27,6 +28,7 @@
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        align-content: center;
         flex-wrap: wrap;
         gap: 30px;
     }
@@ -90,6 +92,7 @@
 
     .gallery2 {
         display: flex;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 30px;
