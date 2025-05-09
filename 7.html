@@ -3,108 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" herf="css/67.css">
     <title>사진첩&쇼핑몰</title>
 </head>
 <body>
-    <style>
-        .container {
-        
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        /* align-items: space-around; */
-        color: blue;
-        /* gap: 20px; */
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .galleryTitle {
-            color: green;
-            text-align: center;
-            border: 3px palevioletred solid ;
-        }
-
-        h1 {
-            color: blueviolet;
-            font-size: 40;
-            text-align: center;
-            border-bottom: double;
-            border-top: double;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-        h2 {
-            margin: 0;
-            color: blueviolet;
-            font-size: 20;
-            text-align: center;
-            border: solid;
-            padding-top: 0;
-            padding-bottom: 5px;
-        }
-        #grid {
-        display: grid;
-        grid-template-columns: 120px 1fr;
-    }
-
-        #split {
-            border-right: 2px dotted gray;
-            height: 400px;
-        }
-
-/* 쇼핑몰 분기 */
-
-        h4 {
-            color: rgb(29, 161, 84);
-            font-size: 60;
-            text-align: center;
-            border-bottom: double;
-            border-top: double;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-
-
-    </style>
-
+    
     <h1>
         갤러리 & 쇼핑몰
     </h1>
     <div id="grid">
 
         <div id="split" class="container">
-            <h2>갤러리 목록</h2><br>
+            <h2>목차</h2><br>
 
-                <div>
-                    1.사자
-                </div>
-                <div>
-                    2.주택
-                </div>
-                <div>
-                    3.강아지
-                </div>
-                <div>
-                    4.코딩
-                </div>
-                <div>
-                    5.도시
-                </div>
-                <div>
-                    6.버터
-                </div>
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+                <li><a href="4.html">자기소개</a></li>
+                <li><a href="5.html">미니실습</a></li>
+                <li><a href="6.html">미니실습-갤러리&쇼핑몰</a></li>
+                <li><a href="7.html">미니실습-꾸미기</a></li>
+            </ol>
 
         </div>
 
