@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>이벤트 핸들러 방법 2-4 확인</h1>
+    <input type="button" value="방법2-hide" id="btn-test2-hide">
+    <input type="button" value="방법2-show" id="btn-test2-show">
+
+    <h2>방법 3 작업</h2>
+    <input type="button" value="방법3-hide" id="btn-test3-hide">
+    <input type="button" value="방법3-show" id="btn-test3-show">
+
+    <h2>방법 4 작업</h2>
+    <input type="button" value="방법4-hide" id="btn-test4-hide">
+    <input type="button" value="방법4-show" id="btn-test4-show">
+
+    <h2>방법 5 작업(if)</h2>
+    <input type="button" value="방법5-button" id="btn-test5-button">
+
+
+    <img src="../../jpg/test1.jpg" alt="버튼테스트" width="150px" id="test-img">
+
+    <script>
+        //2번 방법) direct 1- hide
+        document.getElementById('btn-test2-hide').onclick = function (){
+            document.querySelector('#test-img').style.display = 'none';
+        }   
+        //direct 1- show
+        document.getElementById('btn-test2-show').onclick = function (){
+            document.querySelector('#test-img').style.display = '';
+        }
+
+        //con 정의해서 addEventLis.. 로 하기.
+
+        //3번 방법) 1- hide
+        const btn = document.getElementById('btn-test3-hide')
+        btn.addEventListener('click',
+            function() {
+                document.querySelector('#test-img').style.display = 'none';
+            }
+        )
+
+        // 2- show
+        const btn2 = document.getElementById('btn-test3-show')
+        btn2.addEventListener('click',
+            function() {
+                document.querySelector('#test-img').style.display = '';
+            }
+        )
+
+        //4번 방법) 기능 분리 , 요소 분리
+        const hideClick = () => {
+            document.querySelector('#test-img').style.display = 'none';
+        };
+        const showClick = () => {
+            document.querySelector('#test-img').style.display = '';
+        };
+
+            const btn4_hide = document.getElementById('btn-test4-hide')
+            const btn4_show = document.getElementById('btn-test4-show')
+
+                btn4_hide.addEventListener('click', hideClick)
+                btn4_show.addEventListener('click', showClick)
+
+
+        //5번 방법) 기능 분리, 요소 분리 = 버튼은 1개로
+        const oneClick = () => {
+            const img = document.getElementById('test-img')
+            const btn5 = document.getElementById('btn-test5-button')
+
+
+        if (img.style.display === 'none'){
+            img.style.display = '';
+        }else {
+            img.style.display = 'none';
+        }
+    }   
+    
+    const btn5 = document.getElementById('btn-test5-button');
+    btn5.addEventListener('click', oneClick)
+
+// 
+
+const toggleClick = () => {
+            const img = document.querySelector('#test-img');
+            const toggleBtn = document.getElementById('btn-test4-toggle');
+            
+            if (img.style.display === 'none') {
+              
+                img.style.display = 'block'
+                toggleBtn.value = '숨기기'
+            } else {
+                img.style.display = 'none'
+                toggleBtn.value = '보여주기'
+            }
+
+        }
+        //위에서 정의한 함수를 이제, 요소를 클릭 할 때마다 실행하게끔 정의. 
+        const toggleBtn2 = document.getElementById('btn-test4-toggle');
+        toggleBtn2.addEventListener('click', toggleClick)
+
+
+//  
+    </script>
+
+
+</body>
+</html>

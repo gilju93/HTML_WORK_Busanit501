@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Night/Day Mode</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .night {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .night-mode-btn {
+      background: #444;
+      color: #fff;
+    }
+
+    .day-mode-btn {
+      background: #eee;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>버튼을 눌러 모드를 바꿔보세요.</p>
+
+  <button class="night-mode-btn" onclick="setMode('night')">🌙 Night</button>
+  <button class="day-mode-btn" onclick="setMode('day')">☀️ Day</button>
+
+  <script>
+    function setMode(mode) {
+      if (mode === 'night') {
+        document.body.classList.add('night');
+      } else {
+        document.body.classList.remove('night');
+      }
+    }
+  </script>
+</body>
+</html>

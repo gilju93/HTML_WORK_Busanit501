@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2> 미니 실습 </h2>
+
+    <input type="button" id="test1" value="1번 삭제">
+    <input type="button" id="test1-1" value="1번 복구">
+
+    <br>
+
+    <input type="button" id="test2" value="2번 삭제">
+    <input type="button" id="test2_2" value="2번 복구">
+
+    <br>
+
+    <input type="button" id="test3d" value="3번 삭제">
+    <input type="button" id="test3_3d" value="3번 복구">
+
+
+    <br>
+
+
+    <img src="../../jpg/test1.jpg" alt="예제이미지" id="jpg" width="150px">
+
+
+
+
+
+
+    <script>
+
+        // <h2>2. 자바 스크립트에서 element.onclick 직접 할당.</h2>
+        //     <input type="button" id="btn1" value="Click Me">
+
+        //     <h2>3. addEventListener() 방식 권장, 강추!! <br>장점 : 하나의 요소에 여러 이벤트 등록 가능, 이후에 해제도 가능, 이벤트 위임에 유리함</h2>
+        //     <input type="button" id="btn2" value="Click Me2">   
+
+        //     <h2>4. 기본 함수를 변경해서 더 간단히 이용해보기</h3>
+        //     <input type="button" id="btn3" value="Click Me3">
+
+
+        // 1번 삭제
+        document.getElementById('test1').onclick = function () {
+            document.getElementById('jpg').style.display = 'none';
+        };
+
+
+        // 1번 복구
+        document.getElementById('test1-1').onclick = function () {
+            document.getElementById('jpg').style.display = '';
+        };
+
+
+
+
+
+
+        // 2번 삭제
+        const test2 = document.getElementById('test2');
+        test2.addEventListener('click', function () {
+            document.getElementById('jpg').style.display = 'none';
+        });
+
+        // 2번 복구
+        const test2_2 = document.getElementById('test2_2');
+        test2_2.addEventListener('click', function () {
+            document.getElementById('jpg').style.display = '';
+        });
+
+        // 3번 삭제
+        const test3 = () => document.getElementById('jpg').style.display = 'none';
+        const test3d = document.getElementById('test3d');
+        test3d.addEventListener('click', test3);
+
+        // 3번 복구
+        const test3_3 = () => document.getElementById('jpg').style.display = '';
+        const test3_3d = document.getElementById('test3_3d');
+        test3_3d.addEventListener('click', test3_3);
+
+
+
+
+        // const handleClick2 = function test() {alert("화살표 함수로 더 간단히 이용")}
+        const handleClick = () => alert("화살표 함수로 더 간단히 이용")
+        // 요소 선택하는 방법들
+        // const btn3 = document.querySelector('#btn3')
+        const btn3 = document.getElementById('btn3')
+        // 이벤트를 적용하는 방법
+        btn3.addEventListener('click', handleClick)
+
+    </script>
+
+
+
+</body>
+
+</html>

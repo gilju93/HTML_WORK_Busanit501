@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>버튼 1개로 이미지 숨겼다가 켰다가 하기</h2>
+
+
+    <input type="button" id="test1" value="1번 버튼">
+
+    <br>
+
+    <input type="button" id="test2" value="2번 버튼">
+
+
+    <br>
+
+    <input type="button" id="test3" value="3번 버튼">
+
+
+
+    <br>
+
+
+    <img src="../../jpg/test1.jpg" alt="예제이미지" id="jpg" width="150px">
+
+
+    <script>
+
+        // If문으로 1개로 축약하기
+        // 직접 대입 방법
+
+        document.getElementById('test1').onclick = function () {
+            const img = document.getElementById('jpg');
+            if (img.style.display === 'none') {
+                img.style.display = '';
+            }
+            else {
+                img.style.display = 'none';
+            }
+        };
+
+        // const로 정의하여 addEvnetlinst.. 로 스크립트 짜기
+
+        document.getElementById('test2').onclick = function () {
+            const img = document.getElementById('jpg');
+            if (img.style.display === 'none') {
+                img.style.display = '';
+            }
+            else {
+                img.style.display = 'none';
+            }
+        };
+
+        // 기본 함수를 변경해서 스크립트 짜보기
+
+        const test3 = () => {
+            const img = document.getElementById('jpg');
+            const test3button = document.getElementById('test3');
+
+            test3button.onclick = function () {
+                if (img.style.display === 'none') {
+                    img.style.display = '';
+                }
+                else {
+                    img.style.display = 'none';
+                }
+            }
+
+    
+
+        };
+
+        test3();
+
+
+
+        // const test3 = () => document.getElementById('jpg').style.display = 'none';
+        // const test3d = document.getElementById('test3d');
+        // test3d.addEventListener('click', test3);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>WEB1 - HTML </title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="../../css/style.css">
+ </head>
+
+
+ <body>
+    
+<h1><a href="index.html">WEB</a></h1>
+
+<!-- 오늘의 수업 주제 : 자바스크립트
+목표 : 액션을 주어서 무언가 반응을 얻는 과정 
+onclick > 클릭 시 무언가 액션을 하게 하는 속성-->
+
+<!-- <input type="button" value="night" onclick="alert('alert라는 js 내장 함수 이용')"> -->
+<!-- night 클릭 > 배경화면 변경 속성을 흰색 > 검정으로 변경 할 예정 
+1) 배경 화면 속성을 선택.
+: document. (=객체 : 도구상자, 어떠한 기능이나 속성을 가지고 있는 도구)
+ querySelector : body 태그를 선택하는 기능
+ . >(=dot/점 연산자) 객체의 기능과 속성을 꺼내는 연산자
+-->
+
+
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor = 'black';
+document.querySelector('body').style.color = 'white';
+">
+<input type="button" value="day" onclick="
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';
+">
+
+
+<div id="grid">
+    
+   
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+            <li><a href="4.html">자기소개</a></li>
+            <li><a href="5.html">미니실습</a></li>
+            <li><a href="6.html">미니실습-갤러리&쇼핑몰</a></li>
+            <li><a href="7.html">미니실습-꾸미기</a></li>
+        </ol>
+  
+
+    <div id="article">
+        <h2>HTML이란 무엇인가?</h2>
+        <p><a href="https://www.w3.org/TR/2011/WD-html5-20110405/"  title="HTML5 specification">Hypertext Markup 
+        Language(HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web 
+        applications.
+        Web browsers receive HTML documents from a web server or from local storage and render the documents into 
+        multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the 
+        appearance of the document.</p>
+        <img src="../../jpg/coding.jpg" width="100%">
+        <p style="margin-top: 40px;">
+        HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as 
+        interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by 
+        denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are 
+        delineated by tags, written using angle brackets.
+        </p>
+    </div>
+
+</div>
+ </body>
+ </html>
