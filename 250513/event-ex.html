@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+
+
+
+    <h2>이벤트 핸들러 관련 수업 전 복습</h2>
+
+    <div id="box">
+
+    </div>
+
+<script>
+    // 요소를 선택하는 작업, box 라는 특정 상수에 box라는 ID값을 담았습니다.
+    const box = document.getElementById('box')
+    // 기능 분리, alertSample에 alert테스트 함수입니다. 라는 텍스트를 출력하는 경고창 명령어를 만들었습니다.
+    const alertSample = () => alert("alert 테스트 함수입니다.")
+    // 기능 2번 새로 만들기, backgroundChang에 기존 box상수의 스타일 배경색을 파랑으로 정의하였습니다.
+    const backgroundChang = () => box.style.background = 'blue'
+    // 기능 3번 배경색을 원래대로 되돌리는 것
+    const backgroundRe = () => box.style.background = ''
+
+    // box 라는 요소에 이벤트 실행명령어를 써서, (더블클릭시 , alertSample)을 실행하게 하였습니다.
+    box.addEventListener('dblclick', alertSample)
+    // box 라는 요소에 이벤트 명령어를 써서, (마우스가 들어올 때, backgroundChang)를 실행하게 하였습니다.
+    box.addEventListener('mouseenter', backgroundChang)
+    // 3번 기능 복구 추가
+    box.addEventListener('mouseleave', backgroundRe)
+</script>
+
+</body>
+
+</html>
