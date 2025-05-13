@@ -48,7 +48,7 @@ header {
 #logo h1 {
     font-family: "Dongle";
     font-weight: 700;
-    font-size: 40px;
+    font-size: 70px;
     color: #fff;
     /* 텍스트에 그림자 넣기 */
     /* 옵션설명 : x축방향, y축방향, 그림자퍼짐(흐림효과), 색상 */
@@ -137,8 +137,8 @@ nav {
         스타일 속성 : 값
     }    */
 #topMenu > li > a:hover {
-    color: aqua;
-    text-shadow: 0 -5px 0 #222;
+    color: gold;
+    text-shadow: 0 -5px 0 gray;
 
 }
 
@@ -146,8 +146,8 @@ nav {
 
 .contents {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    width: 1000px;
+    grid-template-columns: 200px 1fr 200px;
+    width: 1200px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 0;
@@ -179,10 +179,16 @@ main h3 {
 }
 
 .detail > img {
-    width: 300px;
+    width: 250px;
+    height: 170px;
     float: left;
     margin-right: 50px;
     border-radius: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.detail > img:hover {
+    transform:scale(1.03);
 }
 
 .schedule h4{
@@ -200,24 +206,28 @@ main h3 {
 /* 푸터 영역 */
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1200px;
     height: 100px;
     border-top: 2px solid #222;
 }
 
 #bottomMenu {
-    width: 100%;
     height: 20px;
-    margin-left: 60px;
 }
 
 #bottomMenu ul {
     margin-top: 15px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
 }
 
 #bottomMenu ul li {
-    float: left;
     padding: 5px 20px;
     border-right: 1px solid gray;
 }
@@ -243,7 +253,25 @@ footer {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     border-radius: 8px;
+    line-height: 30px;
+}
 
+#sideBar2 {
+    width: 200px;
+    float: right;
+    padding: 20px;
+    margin-right: 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+}
+
+#sideBar a {
+    color: orange ;
+    text-shadow: 0 -2px 1px gray;
+    
+    
 }
 
 /* grid 이용하여 2분할  */
