@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hometr</title>
+</head>
+
+<body>
+
+    <h1> 직접적으로 입력값 처리</h1>
+
+    <input type="button" value="button1-hide" id="button1_hide">
+    <input type="button" value="button1-show" id="button1_show">
+
+    <h2> 여러 이벤트를 const로 정의하여 처리</h2>
+
+    <input type="button" value="button2-hide" id="button2_hide">
+    <input type="button" value="button2-show" id="button2_show">
+
+    <h3> 기능과 요소를 각각 분리하여 처리 </h3>
+
+    <input type="button" value="button3-hide" id="button3_hide">
+    <input type="button" value="button3-show" id="button3_show">
+
+    <br>
+
+    <input type="button" value="button4" id="button4">
+
+    <br>
+
+    <img src="../../jpg/test1.jpg" alt="테스트 이미지" id="img" width="150px">
+
+
+
+    <!-- html 끝 -->
+
+    <script>
+
+        // 요소에 기능 1:1 대입하여 처리
+
+        document.getElementById('button1_hide').onclick = function () {
+            document.getElementById('img').style.display = 'none';
+        }
+
+        document.getElementById('button1_show').onclick = function () {
+            document.getElementById('img').style.display = '';
+        }
+
+        // 여러 기능을 한가지 요소에 처리
+
+        const btn2_hide = document.getElementById('button2_hide')
+        btn2_hide.addEventListener('click', 
+            function() {
+                document.getElementById('img').style.display='none';
+            }
+        )
+
+
+        const btn2_show = document.getElementById('button2_show')
+        btn2_show.addEventListener('click', 
+            function() {
+                document.getElementById('img').style.display='';
+            }
+        )
+
+        // 요소와 기능을 각각 처리
+
+        const btn3_hide3 = () => {
+            document.getElementById('img').style.display='none';
+        }
+            const btn3_hide = document.getElementById('button3_hide')
+
+                btn3_hide.addEventListener('click', btn3_hide3)
+
+        const btn3_show3 = () => {
+            document.getElementById('img').style.display='';
+        }
+        
+            const btn3_show = document.getElementById('button3_show')
+
+                btn3_show.addEventListener('click', btn3_show3)
+
+
+        // if를 사용하여 요소와 기능을 각각 처리
+
+        const pbutton = () => {
+            const img = document.getElementById('img')
+            // const btn5 = document.getElementById('button4')
+        
+                if (img.style.display === 'none') {
+                    img.style.display = '';
+                }else{
+                    img.style.display = 'none';
+                }
+            }
+                const btn5 = document.getElementById('button4')
+                btn5.addEventListener('click', pbutton)
+        
+        
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
