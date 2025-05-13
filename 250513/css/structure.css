@@ -1,0 +1,165 @@
+/* 구글폰트 - Dongle 글꼴 가져오기 @import 형식 */
+/* 순서 - 1.임폴트 값 상단에 붙여넣기 2.적용 할 곳에 cssclass 값의 font-family: "Dongle" 붙여넣기. */
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 박스의 영역은 테두리 포함하여 작성하겠다. */
+    box-sizing: border-box;
+    /* font-family: "Dongle"; */
+}
+
+a {
+    /* 하이퍼링크 기본 언더라인 제거 */
+    text-decoration: none;
+}
+
+ul {
+    /*언홀더 리스트 */
+    list-style: none;
+}
+
+#container {
+    /* 0 = 상하단 마진, auto = 좌우측 마진 -> 화면 중앙 배치 */
+    margin: 0 auto;
+    width: 1200px;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: coral;
+}
+
+#logo {
+    /* float - 둥둥 떠있다.// 헤더에서 특정 로고의 위치를 배치 할 때 자주 사용한다. */
+    float: left;
+    width: 250px;
+    height: 100px;
+    /* line-height , 세로로 중간에 맞춤, 줄 간격을 높기 값과 같게 한다. */
+    line-height: 100px;
+    padding-left: 20px;
+}
+
+#logo h1 {
+    font-family: "Dongle";
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    /* 텍스트에 그림자 넣기 */
+    /* 옵션설명 : x축방향, y축방향, 그림자퍼짐(흐림효과), 색상 */
+    text-shadow: 5px -1px 5px #222;
+}
+
+nav {
+    float: right;
+    width: 900px;
+    height: 100px;
+    padding-top: 40px;
+
+}
+
+#topMenu {
+    height: 60px;
+
+}
+
+#topMenu>li {
+    float: left;
+    /* 요소의 위치를 기준 위치로 설정하는 속성
+    문서 흐름을 유지하면서 자신을 기준으로 이동 할 수 있게 설정 */
+    /* position: relative; */
+    top: 30px;
+    /* z-index: -10; */
+}
+
+.tooltip-wrapper {
+    position: relative;
+    /* relative 기준 위치가 없으면 html 태그가 기준 위치가 된다. */
+}
+
+.tooltip {
+    /* class에서 요소를 부모 요소를 기준으로 특정 위치에 배치 할 때 사용
+    정밀한 위치 지정시 많이 사용한다. */
+    /* 문서 흐름에서 제거하고, 가장 가까운 position: relative; 조상 요소를 먼저 기준삼는다. */
+
+    /* 옵션1. 부모요소를 기준으로 아랫쪽에 고정, 문서 흐름에서 제외되어
+    다른 부모 요소와 겹칠 수가 있다. */
+
+    /* position: absolute; */
+    /* top: 100%; */
+
+    /* 옵션2 브라우저의 창에서 우하단에 고정되고, 스크롤 해도 따라온다. */
+    /* position: fixed; */
+
+    /* 옵션3  */
+    /* 스크롤 중, top:0위치에 도달하면 고정된 상태로 전환된다. */
+    /* position: sticky; */
+    /* top: 0px; */
+
+    /* 여기가 기준위치가 된다. */
+    position: relative;
+
+    right: 20px;
+    bottom: 20px;
+
+    left: 0;
+    background: black;
+    color: white;
+    padding: 5px;
+}
+
+#topMenu > li > a {
+    display: block;
+    /* 부모 요소의 글꼴 크기를 기준으로 상대적 크기를 잡는 단위 em
+    예시) 1em. 부모와 1:1 , 1.1em. 부모의 1.1 배 
+    일반적으로 1em = 16px, 1.1em = 16*1.1 = 17.6px 정도의 값이다. */
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 600;
+    /* 위아래20 좌우60 */
+    padding: 20px 60px;
+}
+
+
+    /* 자주 사용하는 가상 클래스 개념
+    행동, 요소의 위치, 상태, 속성 스타일을 동적으로 지정 할 때 사용한다.
+    
+    가상 클래스는 기호 ':' 콜론을 기준으로 사용한다. 
+    
+    기본 문법의 예시)
+    
+    선택자 : 가상 클래스 {
+        스타일 속성 : 값
+    }    */
+#topMenu > li > a:hover {
+    color: aqua;
+    text-shadow: 0 -5px 0 #222;
+
+}
+
+
+/* 대표 가상 클래스 예시 정리
+
+| 가상 클래스               | 설명                             |
+| -------------------- | ------------------------------ |
+| `:hover`             | 마우스를 요소 위에 올렸을 때               |
+| `:active`            | 요소를 클릭하고 있는 순간                 |
+| `:focus`             | 입력 요소에 포커스가 갔을 때               |
+| `:visited`           | 방문한 링크                         |
+| `:link`              | 방문하지 않은 링크                     |
+| `:first-child`       | 부모의 첫 번째 자식 요소                 |
+| `:last-child`        | 부모의 마지막 자식 요소                  |
+| `:nth-child(n)`      | n번째 자식 요소                      |
+| `:not(선택자)`          | 특정 선택자가 아닌 요소                  |
+| `:checked`           | 체크된 input 요소 (checkbox, radio) |
+| `:disabled`          | 비활성화된 form 요소                  |
+| `:enabled`           | 활성화된 form 요소                   |
+| `:empty`             | 내용이 없는 요소                      |
+| `:first-of-type`     | 특정 태그 중 첫 번째 요소                |
+| `:last-of-type`      | 특정 태그 중 마지막 요소                 |
+| `:nth-of-type(n)`    | 특정 태그 중 n번째 요소                 |
+| `:required`          | 필수 입력 요소                       |
+| `:valid`, `:invalid` | 입력값 유효성 검사 결과에 따른 상태           | */
