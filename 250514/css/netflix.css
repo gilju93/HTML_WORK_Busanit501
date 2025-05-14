@@ -141,7 +141,86 @@ nav button {
 
 /* 반응형 header 부분 작업 */
 
+/* 가로 크기가 768px 이하 일 경우의 css */
+/* only screen 오직 화면만 처리함 */
+@media only screen and (max-width: 768px){
+    nav .logo {
+        font-size: 20px;
+
+    }
+    nav button {
+        padding: 5px 10px;
+    }
+
+    .lang {
+        padding: 4px;
+    }
+
+    .header-content {
+        /* 초기값 또는 상속값으로 되돌리는 옵션 */
+        /* 부모로 부터 상속이 가능하면 받고, 불가하면 초기값 리셋 */
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h2{
+        font-size: 48px;
+        line-height: 50px;
+    }
+    .header-content h3{
+        font-size: 20px;
+    }
+    .add-email button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}
 /* banner 부분 작업 */
+
+.banner-content {
+    border-radius: 6px;
+    background: linear-gradient(to right,#651c3d 0%,#280a2b 40%);
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: transform ease-in-out 0.3s;
+}
+
+.banner-content:hover {
+    transform :scale(1.04);
+}
+
+#banner p {
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 30px;
+}
+
+#banner button {
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: rgba(128,128,128,0.4);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.select-menu {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 24px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.select-menu option {
+    background-color: #2b2b2b;
+    color: #fff;
+    
+}
 
 /* membership 부분 작업 */
 
