@@ -1,0 +1,28 @@
+/* 전체적인 태그에 초기화 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 body 하위의 모든 태그에 적용이 된다. */
+
+body {
+    background-color: #111;
+    color : #fff;
+}
+
+section {
+    padding: 40px 10%;
+}
+
+section h2 {
+ font-size: 36px;
+ margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
