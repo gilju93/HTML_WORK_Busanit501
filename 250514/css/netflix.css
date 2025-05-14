@@ -26,3 +26,34 @@ section h3 {
     font-weight: 600;
     margin-bottom: 20px;
 }
+
+
+/* header 작업 */
+
+header {
+    width: 100%;
+    height: 100vh;
+    /* 1)배경 이미지 2)그라데이션 효과  rgb a-투명도까지*/
+    /* background: linear-gradient([방향],색상1,색상2,색상3..); */
+    /* [방향]옵션 : top bottom left right 각도 to right, 45deg */
+    /* 색상 : 시작 색상, 끝 색상, 중간 색상 등 여러개 */
+    /* 현재는 방향이 없어서 반투명이나 그라데이션 효과는 주어지지 않음 */
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(../img/test1.jpg);
+}
+
+/* 반응형 header 부분 작업 */
+
+/* banner 부분 작업 */
+
+/* membership 부분 작업 */
+
+/* choice guide 부분 작업 */
+
+/* 반응형 choice guide 부분 작업 */
+
+/* FAQ 부분 작업 */
+
+/* footer 부분 작업 */
+
+/* 반응형 footer 부분 작업 */
