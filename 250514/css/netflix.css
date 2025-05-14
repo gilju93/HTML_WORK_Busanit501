@@ -86,6 +86,58 @@ nav button {
     background-color: transparent;
 }
 
+.header-content {
+    /* 절대 위치, 기준점은 헤더 태그 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 수직 수평 가운데 정렬 할 때에 자주 사용하는 방식 */
+    transform: translate(-50%, -50%);
+    text-align: center;
+/* 애초에 50%씩 좌상단을 안넓히면 됐는데, 왜 넓히고 trans로 다시 줄이나? */
+/* left와 top 의 기준점은 부모 , trans 의 기준점은 본인 */
+}
+
+.header-content h2 {
+    font-size: 60px;
+    line-height: 1.4;
+    font-style: 600;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.header-content h3 {
+    font-style: 400;
+    margin-bottom: 40px;
+}
+
+.add-email {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    /* 요소가 넘치면 숨기기 */
+    overflow: hidden;
+}
+
+.add-email input {
+    border: 0;
+    outline: 0;
+    /* flex 레이아웃에서 유연하게 공간 분배를 지정하는 단축 속성
+    자동으로 남은 공간을 차지하게 시킨다. */
+    flex: 1;
+    margin-left: 20px;
+}
+
+.add-email button {
+    border: 0;
+    background-color: #db0001;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 /* 반응형 header 부분 작업 */
 
