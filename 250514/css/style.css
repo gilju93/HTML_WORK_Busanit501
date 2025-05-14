@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+body {
+    font-family: "Dongle", sans-serif;
+    margin: 40px;
+    background: #f8f9fa;
+
+    /* 회원가입 폼 중앙정렬 */
+    /* 화면 전체높이 */
+    /* height: 100vh; */
+    display: flex;
+
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 폼 스타일 */
+
+form {
+
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    width: 400px;
+    border-radius: 8px;
+
+    /* 내용 요소들을 세로로 정렬하기 */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+fieldset {
+    display: flex;
+    /* flex-direction: column; */
+
+    border: 1px solid #ddd;
+    pad: 10px;
+    border-radius: 5px;
+}
+
+label {
+    /* display: flex; */
+    /* flex-direction: column; */
+
+}
+
+legend {
+    font-weight: bold;
+}
+
+/* 모든 입력 요소들에 통일된 스타일 적용*/
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="file"] {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+
+}
+
+button {
+    font-family: "Dongle";
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 30px;
+    pad: 20px;
+    background: #e9ecef;
+    border-radius: 6px;
+
+}
+
+#profilePreviewBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    object-fit: cover;
+
+}
+
+#profilePreview {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
