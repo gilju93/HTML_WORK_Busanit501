@@ -39,8 +39,53 @@ header {
     /* 색상 : 시작 색상, 끝 색상, 중간 색상 등 여러개 */
     /* 현재는 방향이 없어서 반투명이나 그라데이션 효과는 주어지지 않음 */
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url(../img/test1.jpg);
+    url(../img/test3.jpg);
+    background-size: cover;
+    padding: 10px 8%;
+    /* 기준 위치를 정함 */
+    position: relative;
 }
+
+nav {
+    display: flex;
+    /* 주 축 방향의 가로 정렬 */
+    justify-content: space-between;
+    /* 교차 축 방향의 세로 정렬 */
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+nav .logo {
+    font-size: 32px;
+    color: #db0001;
+    cursor: pointer;
+
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: #db0001;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lang {
+    /* display: inline-flex : 
+    css Flexbox 레이아웃을 적용하며 요소자체를 인라인으로 취급 */
+    /* flex : 블록 요소 + css Flexbox 레이아웃을 적용 */
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #fff;
+    /* 배경색 드러내기 transparent */
+    background-color: transparent;
+}
+
 
 /* 반응형 header 부분 작업 */
 
