@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainpage</title>
+    <!-- font awesome cdn 아랫열 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/netflix.css">
+</head>
+
+<body>
+
+    <!-- header:section -->
+    <header>
+        <nav>
+            <h1 class="logo">Maintest</h1>
+            <div>
+                <!-- <button class="lang"><i></i></button> -->
+                <button>회원가입</button>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- main:section -->
+
+    <main>
+        <h1 id="container">로그인 화면</h1>
+        <!-- 회원가입 입력 폼 시작 -->
+        <!-- form 태그는 입력창들의 모음집 (그룹화) 
+     클라이언트(앞단)으로 서버 전달시 사용-->
+        <form id="signupForm">
+
+            <div id="profilePreviewBox">
+                <img id="profilePreview" src="img/test1.jpg" alt="프로필 미리보기">
+            </div>
+
+            <label>
+                ID : <input type="text" name="username" placeholder="유저명을 입력해주세요">
+            </label>
+        
+            <label>
+                PW : <input type="password" name="password">
+            </label>
+        
+
+            <button>로그인</button>
+            
+
+        </form>
+    </main>
+
+
+    <!-- footer:section -->
+    <footer>
+        <div class="footer-content">
+            <div class="col left">
+                <ul class="footer-nav">
+                    <li><a href="#">학원안내</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보 취급방침</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+                <div class="footer-info">
+                    <p>상호 : 부산IT501 (담당강사: 이상용)</p>
+                    <p>주소 : 부산광역시 부산진구 중앙대로 706</p>
+                    <p>전화 : 051-803-5600</p>
+                    <p>사업자등록번호 : 123-45-67890</p>
+                </div>
+            </div>
+            <div class="col center">
+                <h2>고객센터</h2>
+                <h3>070-803-5600</h3>
+                <p>월-금 09:00-18:00</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></il>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></il>
+                    <li><a href="#"><i class="fa-brands fa-meta"></i></a></il>
+                </ul>
+            </div>
+            <div class="col right">
+                <h2>커뮤니티</h2>
+                <p><a href="#">공지사항</a></p>
+                <p><a href="#">이벤트</a></p>
+                <p><a href="#">상담</a></p>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <!-- HTML 엔티티 라고 하고, &로 시작하여 ;로 끝남. -->
+            <!-- 특수문자를 HTML 코드 안에서 안전하게 표현하기 위한 방식 -->
+            <p>Copyright &copy;부산it501. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

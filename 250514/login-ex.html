@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 id="container">로그인 예시 폼</h1>
+    <!-- 회원가입 입력 폼 시작 -->
+    <!-- form 태그는 입력창들의 모음집 (그룹화) 
+     클라이언트(앞단)으로 서버 전달시 사용-->
+    <form id="signupForm">
+
+        <div id="profilePreviewBox">
+            <img id="profilePreview" src="img/test1.jpg" alt="프로필 미리보기">
+        </div>
+
+        <label>
+            유저명 : <input type="text" name="username" placeholder="유저명을 입력해주세요">
+        </label>
+        <label>
+            비밀번호 : <input type="password" name="password">
+        </label>
+        
+
+        
+        <button type="submit">로그인</button>
+        <button type="submit">신규 가입하기</button>
+        
+    </form>
+
+    <div id="result">
+        <h3>입력한 정보 결과 확인</h3>
+        <pre id="output"></pre>
+    </div>
+
+    <script src="js/style.js"></script>
+</body>
+
+</html>

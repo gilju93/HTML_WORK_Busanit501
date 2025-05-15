@@ -1,0 +1,314 @@
+/* 전체적인 태그에 초기화 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 body 하위의 모든 태그에 적용이 된다. */
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+section {
+    padding: 40px 10%;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+/* header 작업 */
+
+header {
+    width: 100%;
+    height: 20vh;
+    /* 1)배경 이미지 2)그라데이션 효과  rgb a-투명도까지*/
+    /* background: linear-gradient([방향],색상1,색상2,색상3..); */
+    /* [방향]옵션 : top bottom left right 각도 to right, 45deg */
+    /* 색상 : 시작 색상, 끝 색상, 중간 색상 등 여러개 */
+    /* 현재는 방향이 없어서 반투명이나 그라데이션 효과는 주어지지 않음 */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../img/test3.jpg);
+    background-size: cover;
+    padding: 10px 8%;
+    /* 기준 위치를 정함 */
+    position: relative;
+}
+
+nav {
+    display: flex;
+    /* 주 축 방향의 가로 정렬 */
+    justify-content: space-between;
+    /* 교차 축 방향의 세로 정렬 */
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+nav .logo {
+    font-size: 60px;
+    color: #db0001;
+    cursor: pointer;
+
+}
+
+button {
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background-color: #db0001;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lang {
+    /* display: inline-flex : 
+    css Flexbox 레이아웃을 적용하며 요소자체를 인라인으로 취급 */
+    /* flex : 블록 요소 + css Flexbox 레이아웃을 적용 */
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #fff;
+    /* 배경색 드러내기 transparent */
+    background-color: transparent;
+}
+
+
+
+
+
+/* main 부분 작업 */
+
+main {
+    width: 100%;
+    height: 60vh;
+    /* 1)배경 이미지 2)그라데이션 효과  rgb a-투명도까지*/
+    /* background: linear-gradient([방향],색상1,색상2,색상3..); */
+    /* [방향]옵션 : top bottom left right 각도 to right, 45deg */
+    /* 색상 : 시작 색상, 끝 색상, 중간 색상 등 여러개 */
+    /* 현재는 방향이 없어서 반투명이나 그라데이션 효과는 주어지지 않음 */
+    background: linear-gradient(rgba(70, 69, 69, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../img/test3.jpg);
+    background-size: cover;
+    padding: 10px 8%;
+    /* 기준 위치를 정함 */
+    position: relative;
+}
+
+main h2 {
+    font-size: 3.2em;
+
+}
+
+.main-content {
+    /* 절대 위치, 기준점은 헤더 태그 */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 수직 수평 가운데 정렬 할 때에 자주 사용하는 방식 */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* 애초에 50%씩 좌상단을 안넓히면 됐는데, 왜 넓히고 trans로 다시 줄이나? */
+    /* left와 top 의 기준점은 부모 , trans 의 기준점은 본인 */
+}
+
+.add-email {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    /* 요소가 넘치면 숨기기 */
+    overflow: hidden;
+}
+
+.add-email input {
+    border: 0;
+    outline: 0;
+    /* flex 레이아웃에서 유연하게 공간 분배를 지정하는 단축 속성
+    자동으로 남은 공간을 차지하게 시킨다. */
+    flex: 1;
+    margin-left: 20px;
+}
+
+.add-email button {
+    border: 0;
+    background-color: #db0001;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* footer 부분 작업 */
+
+footer {
+    padding: 60px 10%;
+    height: 20vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+}
+
+.footer-content a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.left {
+    flex-basis: 60%;
+}
+
+.center, .right {
+    flex-basis: 20%;
+    vertical-align: top;
+}
+
+.col h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.col h3 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.footer-nav li:not(:last-child) {
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+}
+
+.footer-info {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.socials {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.socials a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+
+.footer-content p {
+    font-size: 14px;
+    line-height: 0.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+/* 반응형 footer 부분 작업 */
+
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col {
+        flex-basis: 100%;
+    }
+
+    .col h2 {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .col h3 {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* 로그인페이지 추가 css */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profilePreviewBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    object-fit: cover;
+
+}
+
+#profilePreview {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+form{
+    left: 50%;
+    top: 50%;
+    /* 수직 수평 가운데 정렬 할 때에 자주 사용하는 방식 */
+    transform: translate(-50%, -70%);
+    text-align: center;
+    position: absolute;
+}
+
+#signupForm {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
