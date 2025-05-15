@@ -300,15 +300,20 @@ form{
     left: 50%;
     top: 50%;
     /* 수직 수평 가운데 정렬 할 때에 자주 사용하는 방식 */
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -50%);
     text-align: center;
     position: absolute;
 }
 
 #signupForm {
     display: flex;
-    width: 50%;
+    /* width: 50%; */
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    
+}
+
+#signupForm label {
+    text-align: center;
 }
